@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User Form{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <div class="container mt-5">
+    <h1>User Form</h1>
+            <form action="{{ path('create') }}" method="post">
+                <div class="mb-3">
+                    <label for="name" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter Your First Name">
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter Your Last Name">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="number" class="form-control" id="phone" name="phone" placeholder="Enter Your Name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+                </div>
+                <div class="mb-3 text-center">
+                    <button type="submit" class="btn btn-primary ">Submit</button>
+                </div>
+            </form>
+        </div>
+
+   
+</div>
+{% endblock %}
